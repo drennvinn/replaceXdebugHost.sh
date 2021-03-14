@@ -12,4 +12,4 @@ echo "Current IP address :  " $OLD_IP
 echo "New IP address :  " $NEW_IP
 
 # Replace old IP by the new and restart php (in my case php-fpm)
-sudo sed -i /etc/php/7.4/mods-available/xdebug.ini -e 's/'$OLD_IP'/'$NEW_IP'/g' && sudo service php7.4-fpm restart
+sudo sed -i /etc/php/$PHP_VERSION/mods-available/xdebug.ini -e 's/'$OLD_IP'/'$NEW_IP'/g' && sudo service php$PHP_VERSION-fpm restart
